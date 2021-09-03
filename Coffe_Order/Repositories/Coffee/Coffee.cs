@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Coffe_Order.Repositories.Coffee
 {
-    public class Coffee : BaseRepository<Coffee>,ICoffee
+    public class Coffee : BaseRepository<Coffee>, ICoffee
     {
         private IWeatherService _weatherService { get; set; }
 
@@ -18,6 +18,8 @@ namespace Coffe_Order.Repositories.Coffee
             _weatherService = weatherService;
             _logger.LogInformation($"{DateTime.Now.ToString("yyyy-MM-ddTHH:mm:sszzz")} - Access: {System.Reflection.Assembly.GetEntryAssembly().GetName()} ");
         }
+
+
         public async Task<MessageResponse>  GetCoffee()
         {
             _logger.LogInformation($"{DateTime.Now.ToString("yyyy-MM-ddTHH:mm:sszzz")} - Request brew coffee - OK");

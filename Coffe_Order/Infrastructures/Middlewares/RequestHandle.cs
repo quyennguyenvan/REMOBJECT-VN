@@ -20,7 +20,9 @@ namespace Coffe_Order.Infrastructures.Middlewares
         private  ILogger _logger { get; set; }
         
         private int _maxQuotaService { get; set; }
-
+        public RequestHandle()
+        {
+        }
         public RequestHandle(IHttpContextAccessor httpContextAccessor, IDistributedCache distributedCache, IConfiguration configuration, ILoggerFactory loggerFactory)
         {
             _httpContextAccessor = httpContextAccessor;
@@ -31,6 +33,8 @@ namespace Coffe_Order.Infrastructures.Middlewares
             _logger.LogInformation($"{DateTime.Now.ToString("yyyy-MM-ddTHH:mm:sszzz")} - Access: {System.Reflection.Assembly.GetEntryAssembly().GetName()} ");
 
         }
+
+
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
