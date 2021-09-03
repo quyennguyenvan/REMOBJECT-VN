@@ -1,0 +1,40 @@
+2021-09-03 15:45:55.334 +07:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Coffe_Order.Repositories.Coffee.ICoffee Lifetime: Transient ImplementationType: Coffe_Order.Repositories.Coffee.Coffee': Unable to resolve service for type 'Coffe_Order.Infrastructures.ThirdParty.WeatherSerivce.IWeatherService' while attempting to activate 'Coffe_Order.Repositories.Coffee.Coffee'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Coffe_Order.Repositories.Coffee.ICoffee Lifetime: Transient ImplementationType: Coffe_Order.Repositories.Coffee.Coffee': Unable to resolve service for type 'Coffe_Order.Infrastructures.ThirdParty.WeatherSerivce.IWeatherService' while attempting to activate 'Coffe_Order.Repositories.Coffee.Coffee'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Coffe_Order.Infrastructures.ThirdParty.WeatherSerivce.IWeatherService' while attempting to activate 'Coffe_Order.Repositories.Coffee.Coffee'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Coffe_Order.Program.Main(String[] args) in D:\demo\RemoteJob_NhaTrang\Coffe_Order\Program.cs:line 17
+2021-09-03 15:46:04.967 +07:00 [FTL] Host terminated unexpectedly
+System.AggregateException: Some services are not able to be constructed (Error while validating the service descriptor 'ServiceType: Coffe_Order.Repositories.Coffee.ICoffee Lifetime: Transient ImplementationType: Coffe_Order.Repositories.Coffee.Coffee': Unable to resolve service for type 'Coffe_Order.Infrastructures.ThirdParty.WeatherSerivce.IWeatherService' while attempting to activate 'Coffe_Order.Repositories.Coffee.Coffee'.)
+ ---> System.InvalidOperationException: Error while validating the service descriptor 'ServiceType: Coffe_Order.Repositories.Coffee.ICoffee Lifetime: Transient ImplementationType: Coffe_Order.Repositories.Coffee.Coffee': Unable to resolve service for type 'Coffe_Order.Infrastructures.ThirdParty.WeatherSerivce.IWeatherService' while attempting to activate 'Coffe_Order.Repositories.Coffee.Coffee'.
+ ---> System.InvalidOperationException: Unable to resolve service for type 'Coffe_Order.Infrastructures.ThirdParty.WeatherSerivce.IWeatherService' while attempting to activate 'Coffe_Order.Repositories.Coffee.Coffee'.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateArgumentCallSites(Type serviceType, Type implementationType, CallSiteChain callSiteChain, ParameterInfo[] parameters, Boolean throwIfCallSiteNotFound)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.CreateConstructorCallSite(ResultCache lifetime, Type serviceType, Type implementationType, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.TryCreateExact(ServiceDescriptor descriptor, Type serviceType, CallSiteChain callSiteChain, Int32 slot)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteFactory.GetCallSite(ServiceDescriptor serviceDescriptor, CallSiteChain callSiteChain)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.ValidateService(ServiceDescriptor descriptor)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   --- End of inner exception stack trace ---
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider..ctor(IEnumerable`1 serviceDescriptors, IServiceProviderEngine engine, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionContainerBuilderExtensions.BuildServiceProvider(IServiceCollection services, ServiceProviderOptions options)
+   at Microsoft.Extensions.DependencyInjection.DefaultServiceProviderFactory.CreateServiceProvider(IServiceCollection containerBuilder)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateServiceProvider(Object containerBuilder)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at Coffe_Order.Program.Main(String[] args) in D:\demo\RemoteJob_NhaTrang\Coffe_Order\Program.cs:line 17
